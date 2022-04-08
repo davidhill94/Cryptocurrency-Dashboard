@@ -1,0 +1,112 @@
+.data_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 2rem;
+    border: 5px solid #000;
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 5px 10px #000;
+}
+
+.coin_headings {
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw 10vw 10vw;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.coin_headings .coin_market_cap {
+    grid-column: 3 / 4;
+}
+.coin_headings .coin_daily_change {
+    grid-column: 4 / 5;
+}
+.coin_headings .coin_rank_heading {
+    grid-column: 5 / 6;
+}
+
+.data_container ul {
+    list-style: none;
+}
+
+.data_container ul li {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: 10vw 10vw 10vw 10vw 10vw;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.data_container ul li h3 {
+    grid-column: 2 / 3;
+}
+
+.data_container ul li img {
+    height: 50px;
+    width: auto;
+    grid-column: 1 / 2;
+    transform: translateX(50%);
+}
+
+.data_container ul li .market_cap {
+    grid-column: 3 / 4;
+}
+
+.data_container ul li .daily_change {
+    grid-column: 4 / 5;
+}
+
+.data_container ul li .coin_rank {
+    grid-column: 5 / 6;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .data_container ul li {
+        font-size: 1rem;
+        grid-template-columns: 15vw 15vw 15vw 15vw 15vw;
+    }
+    .coin_headings {
+        grid-template-columns: 15vw 15vw 15vw 15vw 15vw;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .data_container ul li,
+    .coin_headings {
+        font-size: 0.8rem;
+    }
+
+    .data_container ul li img {
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .data_container ul li,
+    .coin_headings {
+        font-size: 0.6rem;
+    }
+
+    .data_container ul li img {
+        height: 20px;
+    }
+}
+@media screen and (max-width: 370px) {
+   .data_container {
+       margin: 0;
+       padding: 1rem;
+       border: 1px solid #000;
+       box-shadow: none;
+   }
+
+   .data_container ul li {
+    font-size: 0.5rem;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+}
+.coin_headings {
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+}
+}
