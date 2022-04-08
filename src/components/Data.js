@@ -115,58 +115,19 @@ const Data = ({ coins, order, listNumber, orderType, setOrderType, search, filte
 
 
     //Controls number of coins shown
-    const handleNumberVisible = () => {
-        if (orderType === "name") {
+    const handleNumberVisible = (name, type) => {
+        if (orderType === name) {
             if (listNumber === "five") {
-                return alphabetical
+                return type
                     .slice(0, 5)
             } else if (listNumber === "ten") {
-                return alphabetical.slice(0, 10)
+                return type.slice(0, 10)
             } else if (listNumber === "twenty") {
-                return alphabetical.slice(0, 20)
+                return type.slice(0, 20)
             } else if (listNumber === "fifty") {
-                return alphabetical.slice(0, 50)
+                return type.slice(0, 50)
             } else if (listNumber === "all") {
-                return alphabetical
-            }
-        } else if (orderType === "marketCap") {
-            if (listNumber === "five") {
-                return marketCap
-                    .slice(0, 5)
-            } else if (listNumber === "ten") {
-                return marketCap.slice(0, 10)
-            } else if (listNumber === "twenty") {
-                return marketCap.slice(0, 20)
-            } else if (listNumber === "fifty") {
-                return marketCap.slice(0, 50)
-            } else if (listNumber === "all") {
-                return marketCap
-            }
-        } else if (orderType === "dailyPercent") {
-            if (listNumber === "five") {
-                return dailyPercentageChange
-                    .slice(0, 5)
-            } else if (listNumber === "ten") {
-                return dailyPercentageChange.slice(0, 10)
-            } else if (listNumber === "twenty") {
-                return dailyPercentageChange.slice(0, 20)
-            } else if (listNumber === "fifty") {
-                return dailyPercentageChange.slice(0, 50)
-            } else if (listNumber === "all") {
-                return dailyPercentageChange
-            }
-        } else if (orderType === "rank") {
-            if (listNumber === "five") {
-                return handleRank
-                    .slice(0, 5)
-            } else if (listNumber === "ten") {
-                return handleRank.slice(0, 10)
-            } else if (listNumber === "twenty") {
-                return handleRank.slice(0, 20)
-            } else if (listNumber === "fifty") {
-                return handleRank.slice(0, 50)
-            } else if (listNumber === "all") {
-                return handleRank
+                return type
             }
         }
     }
@@ -198,10 +159,10 @@ const Data = ({ coins, order, listNumber, orderType, setOrderType, search, filte
                     <h3 className='coin_daily_change'>Daily % change</h3>
                     <h3 className='coin_rank_heading'>Rank</h3>
                 </div>
-                {orderType === "marketCap" ? handleNumberVisible() : null}
-                {orderType === "name" ? handleNumberVisible() : null}
-                {orderType === "dailyPercent" ? handleNumberVisible() : null}
-                {orderType === "rank" ? handleNumberVisible() : null}
+                {orderType === "marketCap" ? handleNumberVisible("marketCap", marketCap) : null}
+                {orderType === "name" ? handleNumberVisible("name", alphabetical) : null}
+                {orderType === "dailyPercent" ? handleNumberVisible("dailyPercent", dailyPercentageChange) : null}
+                {orderType === "rank" ? handleNumberVisible("rank", handleRank) : null}
             </ul>
         </div>
     )
