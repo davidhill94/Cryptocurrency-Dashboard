@@ -13,4 +13,10 @@ body {
   align-items: flex-start;
   justify-content: center;
   background-image: linear-gradient(to right top, #051937, #052a6f, #3735a6, #7734d7, #c300ff);
+  background: #052a6f;
+  background: -moz-linear-gradient(to right top, #051937, #052a6f, #3735a6, #7734d7, #c300ff);
+  background: -webkit-linear-gradient(to right top, #051937, #052a6f, #3735a6, #7734d7, #c300ff);
+  background: linear-gradient(to right top, #051937, #052a6f, #3735a6, #7734d7, #c300ff);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#051937",endColorstr="#3735a6",GradientType=1);
+  
 }

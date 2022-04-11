@@ -6,7 +6,12 @@
     padding: 2rem;
     border: 5px solid #000;
     border-radius: 4px;
+    -webkit-border-radius: 4px; 
+    -moz-border-radius:4px;
+    -khtml-border-radius:4px;
     box-shadow: inset 0px 0px 5px 10px #000;
+    -webkit-box-shadow: inset 0px 0px 5px 10px #000;
+    -moz-box-shadow: inset 0px 0px 5px 10px #000;
 }
 
 .coin_headings {
